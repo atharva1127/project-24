@@ -7,17 +7,17 @@ class Paper {
             density:1.2
         }
         this.r=r;
-        this.body=Bodies.circle(x,y,this.r/2,options);
+        this.body=Bodies.circle(x, y, (this.r-20)/2,options);
+        this.image = loadImage("pitcher/paper.png")
        
         World.add(world,this.body);
     }
     display(){
         var pos =this.body.position;
         push();
-        fill(225);
-        translate(pos.x,pos.y)
-        ellipseMode(CENTER)
-        ellipse(0,0,this.r,this.r);
+        translate(pos.x,pos.y);
+        imageMode(CENTER);
+        image(this.image, 0, 0, this.r,this.r);
         pop();
         
      }
