@@ -23,7 +23,7 @@ function setup() {
 	// wall1=new Dustbin(1100,540,1,200);
 	// wall2=new Dustbin(1300,540,1,200);
 	// //var render = Render.create({ element: document.body, engine: engine, options: { width: 1200, height: 700, wireframes: false } });
-	wall=new Dustbin(1300,515);
+	wall=new Dustbin(1350,515);
 	Engine.run(engine);
 	//Render.run(render);
 } 
@@ -43,6 +43,6 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position, {x:133,y:-145})
+		Matter.Body.applyForce(paper.body,paper.body.position, {x:133,y:-190})
     }
 }
